@@ -10,10 +10,8 @@ if (!OpenConfigurationFile(&configurationFile)) {
 compiledScript := ConfigurationFileToCodeString(configurationFile)
 
 CreateTemporaryConfigurationFile(
-    "; -->VersionNr<--`n" 
     "; This file was generated automatically and should not be edited!`n" 
     compiledScript
-    "`n MsgBox('If you see this then compiler is run!')"
 )
 
 Exit
