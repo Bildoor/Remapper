@@ -3,3 +3,9 @@
 #Include constants.ahk
 
 #Include rebinds-compiled.tmp ; TODO: fix this to use const
+
+; Close application with help of Ctrl + Shift + S
+^+s::{
+    MsgBox("Shortcut found, exiting...")
+    ExitApp
+}

@@ -4,6 +4,7 @@
 FileInstall("constants.ahk", "constants.ahk")
 FileInstall("compiler.ahk", "compiler.ahk")
 FileInstall("rebinds.ahk", "rebinds.ahk")
+FileInstall("rebinds.config", "rebinds.config")
 ;This should be required to work correctly: FileInstall
 
 MsgBox("File is here: " Constants.SCRIPT_COMPILER)

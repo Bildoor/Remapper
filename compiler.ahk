@@ -34,7 +34,7 @@ ConfigurationFileToCodeString(configurationFile) {
         line := configurationFile.ReadLine()
         lineCounter++
         if (!ConfigurationLineIsValid(line)) {
-            MsgBox("Line " lineCounter " contained: '" line "'which is not a valid configuration.")
+            MsgBox("Line " lineCounter " of rebinds.config contained: '" line "' which is not a valid configuration.")
             continue
         }
     
