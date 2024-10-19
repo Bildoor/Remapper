@@ -9,9 +9,9 @@ To change this you should start with exiting the program using Ctrl + Shift + S 
 
 This file follows this syntax
 
-    ```
+    
     targetbutton -> desiredbutton
-    ```
+    
 
 so if you wanted to rebind your c key to output i, you would enter
 
