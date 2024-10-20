@@ -2,15 +2,15 @@
 #SingleInstance Force
 #include constants.ahk
 
-if (InstallationIsRequired()) {
+if (A_IsCompiled && InstallationIsRequired()) {
     PerformInstallation()
 }
 
 if (!CompiledFileExists()) {
-    RunWait Constants.SCRIPT_COMPILER
+    RunWaitCustom(Constants.SCRIPT_COMPILER)
 }
 
-RunWait Constants.SCRIPT_REBINDS
+RunWaitCustom(Constants.SCRIPT_REBINDS)
 
 RemoveTemporaryConfigurationFile()
 ExitApp
@@ -26,6 +26,7 @@ InstallationIsRequired() {
 }
 
 PerformInstallation() {
+    FileInstall("assets/AutoHotkey64.exe", "AutoHotkey64.exe", true)
     FileInstall("constants.ahk", "constants.ahk", true)
     FileInstall("compiler.ahk", "compiler.ahk", true)
     FileInstall("rebinds.ahk", "rebinds.ahk", true)
@@ -36,6 +37,14 @@ RemoveTemporaryConfigurationFile() {
     if (FileExist(Constants.TEMP_CONFIG_FILE_PATH)) {
         FileDelete(Constants.TEMP_CONFIG_FILE_PATH)
     }
+}
+
+RunWaitCustom(filename) {
+    if(A_IsCompiled) {
+        RunWait("AutoHotkey64.exe " filename)
+        return
+    }
+    RunWait(filename)
 }
 
 CompiledFileExists() {
