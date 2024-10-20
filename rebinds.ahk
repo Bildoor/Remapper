@@ -1,6 +1,7 @@
 ﻿#Requires AutoHotkey v2.0
 #SingleInstance Force
 #Include constants.ahk
+#NoTrayIcon
 
 #Include rebinds-compiled.tmp ; TODO: fix this to use const
 
@@ -9,3 +10,4 @@
     MsgBox("Shortcut found, exiting...")
     ExitApp
 }
+
