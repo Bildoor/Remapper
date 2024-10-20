@@ -6,9 +6,7 @@ if (A_IsCompiled && InstallationIsRequired()) {
     PerformInstallation()
 }
 
-if (!CompiledFileExists()) {
-    RunWaitCustom(Constants.SCRIPT_COMPILER)
-}
+RunWaitCustom(Constants.SCRIPT_COMPILER)
 
 RunWaitCustom(Constants.SCRIPT_REBINDS)
 
@@ -47,6 +45,3 @@ RunWaitCustom(filename) {
     RunWait(filename)
 }
 
-CompiledFileExists() {
-    return false
-}
