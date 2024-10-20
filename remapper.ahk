@@ -72,7 +72,6 @@ DrawGui(&gui) {
 
 ReadCommandLineArguments(&configuration) {
     for(argument in A_Args) {
-        MsgBox(argument)
         if(RegExMatch(argument, "nologo")) {
             configuration.showProgramLogo := false
         }
