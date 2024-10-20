@@ -28,4 +28,4 @@ multiple bindings can be added line by line, so if you wanted to swap c and i yo
 
 When trying to bind other keys than letters you might need to follow [this](https://www.autohotkey.com/docs/v2/KeyList.htm) reference to see what keys are called in AHK, since that is the backbone of this whole project.
 
-
+To prevent Remapper logo from showing, run the program with command line argument -nologo

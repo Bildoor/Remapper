@@ -1,0 +1,3 @@
+class Configuration {
+    showProgramLogo := true
+}
