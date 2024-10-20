@@ -7,7 +7,7 @@
 
 ; Close application with help of Ctrl + Shift + S
 ^+s::{
-    MsgBox("Shortcut found, exiting...")
+    MsgBox("Exiting`n`nThank you for running Remapper!", "Exiting")
     ExitApp
 }
 
