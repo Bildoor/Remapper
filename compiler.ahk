@@ -1,6 +1,9 @@
 ; This program assumes that the compiler needs to run and therefore runs no matter if it is needed or not.
 
+#Requires AutoHotkey v2.0
+#SingleInstance Force
 #Include constants.ahk
+#NoTrayIcon
 
 configurationFile := ""
 if (!OpenConfigurationFile(&configurationFile)) {
